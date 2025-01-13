@@ -108,15 +108,12 @@ label:last-child span {
   background-color: #f6f6f8;
   border: 1px solid #ddd;
   color: #73431d;
-  margin-right: 3px;
-  margin-top: 5px;
-  margin-bottom: 1px;
+  margin: 5px 5px 5px 5px;
   justify-content: center;
 }
 .tab.active,
 .sub-tab.active,
 .small-category-tab.active {
-  /* background-color: #4caf50; */
   background-color: #6ec409;
   color: #f6f6f8;
 }
