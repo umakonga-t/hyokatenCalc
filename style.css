@@ -185,18 +185,3 @@ label:last-child span {
   display: flex;
   justify-content: center;
 }
-.accordion-001 {
-  max-width: 70%;
-}
-.accordion-001 summary {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  padding: 0.5em;
-  border-left: 5px solid #ffaf58;
-  background-color: #f2ece0;
-  color: #73431d;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
