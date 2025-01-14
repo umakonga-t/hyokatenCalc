@@ -74,48 +74,50 @@
       <p id="gut_pt">3841pt</p>
       <p id="int_pt">3841pt</p>
     </span>
-    <h3>固有スキル</h3>
-    <div class="koyu_skill">
-      <div>
+    <details open class="accordion-001">
+      <summary>固有スキル</summary>
+      <div class="koyu_skill">
         <div>
-          <label>
-            <input type="radio" name="star" id="star2" value="120" />
-            <span>★★以下</span>
-          </label>
-          <label>
-            <input type="radio" name="star" id="star3" value="170" checked />
-            <span>★★★以上</span>
-          </label>
+          <div>
+            <label>
+              <input type="radio" name="star" id="star2" value="120" />
+              <span>★★以下</span>
+            </label>
+            <label>
+              <input type="radio" name="star" id="star3" value="170" checked />
+              <span>★★★以上</span>
+            </label>
+          </div>
+          <div>
+            <label>
+              <input type="radio" name="level" id="level1" value="1" />
+              <span>1</span>
+            </label>
+            <label>
+              <input type="radio" name="level" id="level2" value="2" />
+              <span>2</span>
+            </label>
+            <label>
+              <input type="radio" name="level" id="level3" value="3" checked />
+              <span>3</span>
+            </label>
+            <label>
+              <input type="radio" name="level" id="level4" value="4" />
+              <span>4</span>
+            </label>
+            <label>
+              <input type="radio" name="level" id="level5" value="5" />
+              <span>5</span>
+            </label>
+            <label>
+              <input type="radio" name="level" id="level6" value="6" />
+              <span>6</span>
+            </label>
+          </div>
+          <p id="koyu_pt">510pt</p>
         </div>
-        <div>
-          <label>
-            <input type="radio" name="level" id="level1" value="1" />
-            <span>1</span>
-          </label>
-          <label>
-            <input type="radio" name="level" id="level2" value="2" />
-            <span>2</span>
-          </label>
-          <label>
-            <input type="radio" name="level" id="level3" value="3" checked />
-            <span>3</span>
-          </label>
-          <label>
-            <input type="radio" name="level" id="level4" value="4" />
-            <span>4</span>
-          </label>
-          <label>
-            <input type="radio" name="level" id="level5" value="5" />
-            <span>5</span>
-          </label>
-          <label>
-            <input type="radio" name="level" id="level6" value="6" />
-            <span>6</span>
-          </label>
-        </div>
-        <p id="koyu_pt">510pt</p>
       </div>
-    </div>
+    </details>
     <div>
       <h3>取得スキル</h3>
       <div id="selected-items-container" class="selected-items-list"></div>
