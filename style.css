@@ -65,13 +65,34 @@ label span {
   border: 1px solid #ddd;
   color: #73431d;
 }
-.tab,
-.sub-tab,
+.tab {
+  display: inline-block;
+  padding: 10px 25px;
+  cursor: pointer;
+  background-color: #f9e8fa;
+  border: 1px solid #ddd;
+  color: #73431d;
+  font-size: 1.1em;
+  margin: 5px 5px 5px 5px;
+  justify-content: center;
+}
+.sub-tab {
+  display: inline-block;
+  padding: 10px 25px;
+  cursor: pointer;
+  background-color: #e8f3fa;
+  border: 1px solid #ddd;
+  color: #73431d;
+  font-size: 1.1em;
+  margin: 5px 5px 5px 5px;
+  justify-content: center;
+}
+
 .small-category-tab {
   display: inline-block;
   padding: 10px 25px;
   cursor: pointer;
-  background-color: #f6f6f8;
+  background-color: #e8faf6;
   border: 1px solid #ddd;
   color: #73431d;
   font-size: 1.1em;
@@ -99,7 +120,7 @@ label span {
   color: #73431d;
   border: 1px solid #ddd;
   border-radius: 5px;
-  font-size: 1.0em;
+  font-size: 1em;
 }
 .selected-items-list {
   margin: 0% 2% 3% 2%;
@@ -107,16 +128,36 @@ label span {
   flex-wrap: wrap;
   color: #73431d;
   font-style: bold;
-  font-size: 1.0em;
+  font-size: 1em;
 }
 @media screen and (max-width: 980px) {
-  .tab,
-  .sub-tab,
+  .tab {
+    display: inline-block;
+    padding: 18px 32px;
+    cursor: pointer;
+    background-color: #f9e8fa;
+    border: 1px solid #ddd;
+    color: #73431d;
+    font-size: 1.1em;
+    margin: 10px 5px 5px 5px;
+    justify-content: center;
+  }
+  .sub-tab {
+    display: inline-block;
+    padding: 18px 32px;
+    cursor: pointer;
+    background-color: #e8f3fa;
+    border: 1px solid #ddd;
+    color: #73431d;
+    font-size: 1.1em;
+    margin: 10px 5px 5px 5px;
+    justify-content: center;
+  }
   .small-category-tab {
     display: inline-block;
     padding: 18px 32px;
     cursor: pointer;
-    background-color: #f6f6f8;
+    background-color: #e8faf6;
     border: 1px solid #ddd;
     color: #73431d;
     font-size: 1.1em;
