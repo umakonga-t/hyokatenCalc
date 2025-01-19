@@ -291,3 +291,54 @@ input:invalid + .error {
   color: red;
   font-size: 0.9em;
 }
+/* ノーマルとレアカテゴリの中カテゴリ */
+.selected-item.normal-orange {
+  background-color: #d7d3ec; /* オレンジ */
+}
+.selected-item.rare-orange {
+  background-color: #ffc742; /* レア用色 */
+}
+.selected-item.normal-green {
+  background-color: lightgreen; /* 緑 */
+}
+.selected-item.rare-green {
+  background-color: #ffc742; /* レア用色 */
+  color: green;
+}
+.selected-item.normal-blue {
+  background-color: lightblue; /* 青 */
+}
+.selected-item.rare-blue {
+  background-color: #ffc742; /* レア用色 */
+  color: blue;
+}
+.selected-item.normal-red {
+  background-color: #ffcccb;
+}
+.selected-item.rare-red {
+  background-color: #ffc742; /* レア用色 */
+  color: red;
+}
+.selected-item.purple {
+  background-color: #dda0dd; /* 紫 */
+}
+/* デフォルトの背景色 */
+.selected-item.default {
+  background-color: #ffffff; /* デフォルトの色 */
+}
+/* 大カテゴリに応じた背景色 */
+.selected-item.継承 {
+  background-color: #d7d3ec; /* 継承用色 */
+}
+.selected-item.ノーマル {
+  background-color: #d7d3ec; /* ノーマル用色 */
+}
+.selected-item.レア {
+  background-color: #ffc742; /* レア用色 */
+}
+.selected-item.本体進化 {
+  background-color: #fea5d7; /* 本体進化用色 */
+}
+.selected-item.シナリオ進化 {
+  background-color: #fea5d7; /* シナリオ進化用色 */
+}
