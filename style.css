@@ -293,7 +293,7 @@ input:invalid + .error {
 }
 /* ノーマルとレアカテゴリの中カテゴリ */
 .selected-item.normal-orange {
-  background-color: #d7d3ec; /* オレンジ */
+  background-color: #ffeea4; /* オレンジ */
 }
 .selected-item.rare-orange {
   background-color: #ffc742; /* レア用色 */
@@ -328,7 +328,7 @@ input:invalid + .error {
 }
 /* 大カテゴリに応じた背景色 */
 .selected-item.継承 {
-  background-color: #d7d3ec; /* 継承用色 */
+  background-color: #ffeea4; /* 継承用色 */
 }
 .selected-item.ノーマル {
   background-color: #d7d3ec; /* ノーマル用色 */
