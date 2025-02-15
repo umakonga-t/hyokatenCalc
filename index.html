@@ -21,11 +21,11 @@
 <details open class=accordion-001>
 <summary>ステータス</summary>
 <div id=stas_box>
-<input type=number id=spd value=12 max=1899 min=0 step=1 required>
-<input type=number id=sta value=12 max=1899 min=0 step=1 required>
-<input type=number id=pow value=12 max=1899 min=0 step=1 required>
-<input type=number id=gut value=12 max=1899 min=0 step=1 required>
-<input type=number id=int value=12 max=1899 min=0 step=1 required>
+<input type=number id=spd max=1899 min=0 step=1>
+<input type=number id=sta max=1899 min=0 step=1>
+<input type=number id=pow max=1899 min=0 step=1>
+<input type=number id=gut max=1899 min=0 step=1>
+<input type=number id=int max=1899 min=0 step=1>
 </div>
 <div id=error_container>
 <div class=error id=stas_error>
@@ -77,7 +77,7 @@
 <input type=radio name=level id=level6 value=6>
 <span>Lv 6</span>
 </label>
-<p id=koyu_pt>510pt</p>
+<p id=koyu_pt></p>
 </div>
 </div>
 </details>
@@ -91,10 +91,8 @@
 </details>
 <div id=selected-items-container class=selected-items-list></div>
 <div class=footer1>
-<div id=totalPointsContainerBottom class=rank-points>G+ : 540</div>
-<div id=remainPointsContainer class=remain-points>
-UE上限まで残り: 28859
-</div>
+<div id=totalPointsContainerBottom class=rank-points></div>
+<div id=remainPointsContainer class=remain-points></div>
 </div>
 <button id=reset-button>選択済スキルの全クリア</button>
 <script src=main.js defer></script>
