@@ -20,29 +20,32 @@
 <details open class=accordion-001>
 <summary>ステータス</summary>
 <div id=stas_box>
-<input type=number id=spd max=2000 min=0 step=1>
-<input type=number id=sta max=2000 min=0 step=1>
-<input type=number id=pow max=2000 min=0 step=1>
-<input type=number id=gut max=2000 min=0 step=1>
-<input type=number id=wiz max=2000 min=0 step=1>
-</div>
-<div id=error_container>
-<div class=error id=stas_error>
-0～2000の半角数字を入力してください
-</div>
-</div>
-<div id=stas_pt_box>
+<div class=input-group>
+<input type=number id=spd min=0 step=1>
 <p id=spd_pt></p>
+</div>
+<div class=input-group>
+<input type=number id=sta min=0 step=1>
 <p id=sta_pt></p>
+</div>
+<div class=input-group>
+<input type=number id=pow min=0 step=1>
 <p id=pow_pt></p>
+</div>
+<div class=input-group>
+<input type=number id=gut min=0 step=1>
 <p id=gut_pt></p>
+</div>
+<div class=input-group>
+<input type=number id=wiz min=0 step=1>
 <p id=wiz_pt></p>
+</div>
 </div>
 </details>
 <details open class=accordion-001>
 <summary>固有スキル</summary>
 <div class=koyu_skill>
-<div>
+<div class=radio-group id=star-group>
 <label>
 <input type=radio name=star id=star2 value=120>
 <span>★★以下</span>
@@ -51,49 +54,50 @@
 <input type=radio name=star id=star3 value=170 checked>
 <span>★★★以上</span>
 </label>
-<p></p>
+</div>
+<div class=radio-group id=level-group>
 <label>
 <input type=radio name=level id=level1 value=1>
-<span>Lv 1</span>
+<span>Lv1</span>
 </label>
 <label>
 <input type=radio name=level id=level2 value=2>
-<span>Lv 2</span>
+<span>Lv2</span>
 </label>
 <label>
 <input type=radio name=level id=level3 value=3 checked>
-<span>Lv 3</span>
+<span>Lv3</span>
 </label>
 <label>
 <input type=radio name=level id=level4 value=4>
-<span>Lv 4</span>
+<span>Lv4</span>
 </label>
 <label>
 <input type=radio name=level id=level5 value=5>
-<span>Lv 5</span>
+<span>Lv5</span>
 </label>
 <label>
 <input type=radio name=level id=level6 value=6>
-<span>Lv 6</span>
+<span>Lv6</span>
 </label>
-<p id=koyu_pt></p>
 </div>
+<div id=koyu_pt></div>
 </div>
 </details>
 <details open class=accordion-001>
 <summary>取得スキル</summary>
-<div id=category-tabs-container></div>
-<div id=sub-category-tabs-container></div>
-<div id=small-category-tabs-container></div>
+<div id=category-tabs-container data-role=big-category></div>
+<div id=sub-category-tabs-container data-role=mid-category></div>
+<div id=small-category-tabs-container data-role=small-category></div>
 <div id=items-container></div>
-<div id=skill-points class=skill-points>0pt</div>
+<div id=skill-points class=skill-points>0</div>
 </details>
-<div id=selected-items-container class=selected-items-list></div>
+<div id=selected-items-container class=selected-items-list data-role=selected-items></div>
 <div class=footer1>
-<div id=totalPointsContainerBottom class=rank-points></div>
-<div id=remainPointsContainer class=remain-points></div>
+<div id=totalPointsContainerBottom class=rank-points data-role=total-points></div>
+<div id=remainPointsContainer class=remain-points data-role=remain-points></div>
 </div>
-<button id=reset-button>選択済スキルの全クリア</button>
+<button id=reset-button data-role=reset>選択済スキルの全クリア</button>
 <script src=main.js defer></script>
 </body>
 </html>
