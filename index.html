@@ -97,7 +97,20 @@
 <div id=totalPointsContainerBottom class=rank-points data-role=total-points></div>
 <div id=remainPointsContainer class=remain-points data-role=remain-points></div>
 </div>
-<button id=reset-button data-role=reset>選択済スキルの全クリア</button>
+<div id=bottom-buttons>
+<div class=mode-selector>
+<label for=mode-chk>
+<input type=radio id=mode-chk name=select_mode value=chk>
+<span>赤枠付与</span>
+</label>
+<label for=mode-del>
+<input type=radio id=mode-del name=select_mode value=del checked>
+<span>削除</span>
+</label>
+</div>
+<button id=uncheck-all-button>赤枠全解除</button>
+<button id=reset-button data-role=reset>選択済スキル全削除</button>
+</div>
 <script src=main.js defer></script>
 </body>
 </html>
