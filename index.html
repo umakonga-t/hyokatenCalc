@@ -111,6 +111,24 @@
 <button id=uncheck-all-button>赤枠全解除</button>
 <button id=reset-button data-role=reset>選択済スキル全削除</button>
 </div>
+<details class=accordion-001>
+<summary>非表示スキル</summary>
+<div id=hidden-lists>
+<div class=edit-mode>
+<label><input type=radio id=mode-edit name=app-mode>
+<span>編集モードON</span></label>
+<label><input type=radio id=mode-normal name=app-mode checked>
+<span>OFF</span></label>
+</div>
+<button id=clear-hidden-button class=action-button>
+非表示の全解除
+</button>
+<button id=save-hidden-button class=action-button>
+LocalStrageに保存
+</button>
+</div>
+<div id=hidden-items-container></div>
+</details>
 <script src=main.js defer></script>
 </body>
 </html>
