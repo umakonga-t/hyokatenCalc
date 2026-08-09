@@ -16,36 +16,53 @@
 <link rel=stylesheet href="https://fonts.googleapis.com/css?family=Noto+Sans+JP">
 </head>
 <body>
+<main>
 <h1>ウマ娘 オープン育成の評価点計算 (適性S,A限定)</h1>
+<section>
+<h2 class=visually-hidden>ステータス</h2>
 <details open class=accordion-001>
-<summary>ステータス (2001以上は検証中)</summary>
+<summary>
+ステータス
+<span id=summary-status></span>
+</summary>
 <div id=stas_box>
 <div class=input-group>
+<label for=spd>スピード</label>
 <input type=number id=spd min=0 step=1>
 <p id=spd_pt></p>
 </div>
 <div class=input-group>
+<label for=sta>スタミナ</label>
 <input type=number id=sta min=0 step=1>
 <p id=sta_pt></p>
 </div>
 <div class=input-group>
+<label for=pow>パワー</label>
 <input type=number id=pow min=0 step=1>
 <p id=pow_pt></p>
 </div>
 <div class=input-group>
+<label for=gut>根性</label>
 <input type=number id=gut min=0 step=1>
 <p id=gut_pt></p>
 </div>
 <div class=input-group>
+<label for=wiz>賢さ</label>
 <input type=number id=wiz min=0 step=1>
 <p id=wiz_pt></p>
 </div>
 </div>
 </details>
+</section>
+<section>
+<h2 class=visually-hidden>固有スキル</h2>
 <details open class=accordion-001>
-<summary>固有スキル</summary>
-<div class=koyu_skill>
-<div class=radio-group id=star-group>
+<summary>
+固有スキル
+<span id=summary-koyu_lv></span>
+</summary>
+<div id=koyu_skill>
+<div id=star-group role=radiogroup aria-label=才能開花ランク>
 <label>
 <input type=radio name=star id=star2 value=120>
 <span>★★以下</span>
@@ -55,35 +72,20 @@
 <span>★★★以上</span>
 </label>
 </div>
-<div class=radio-group id=level-group>
-<label>
-<input type=radio name=level id=level1 value=1>
-<span>Lv1</span>
-</label>
-<label>
-<input type=radio name=level id=level2 value=2>
-<span>Lv2</span>
-</label>
-<label>
-<input type=radio name=level id=level3 value=3 checked>
-<span>Lv3</span>
-</label>
-<label>
-<input type=radio name=level id=level4 value=4>
-<span>Lv4</span>
-</label>
-<label>
-<input type=radio name=level id=level5 value=5>
-<span>Lv5</span>
-</label>
-<label>
-<input type=radio name=level id=level6 value=6>
-<span>Lv6</span>
-</label>
+<div id=level-group role=radiogroup aria-label=固有スキルレベル>
+<label><input type=radio name=level id=level1 value=1><span>Lv1</span></label>
+<label><input type=radio name=level id=level2 value=2><span>Lv2</span></label>
+<label><input type=radio name=level id=level3 value=3 checked><span>Lv3</span></label>
+<label><input type=radio name=level id=level4 value=4><span>Lv4</span></label>
+<label><input type=radio name=level id=level5 value=5><span>Lv5</span></label>
+<label><input type=radio name=level id=level6 value=6><span>Lv6</span></label>
 </div>
 <div id=koyu_pt></div>
 </div>
 </details>
+</section>
+<section>
+<h2 class=visually-hidden>取得スキル</h2>
 <details open class=accordion-001>
 <summary>取得スキル</summary>
 <div id=category-tabs-container data-role=big-category></div>
@@ -92,11 +94,20 @@
 <div id=items-container></div>
 <div id=skill-points class=skill-points>0</div>
 </details>
+</section>
+<section>
+<h2 class=visually-hidden>選択済みスキル</h2>
 <div id=selected-items-container class=selected-items-list data-role=selected-items></div>
+</section>
+<section>
+<h2 class=visually-hidden>合計ポイント</h2>
 <div class=footer1>
 <div id=totalPointsContainerBottom class=rank-points data-role=total-points></div>
 <div id=remainPointsContainer class=remain-points data-role=remain-points></div>
 </div>
+</section>
+<section>
+<h2 class=visually-hidden>操作モード</h2>
 <div id=bottom-buttons>
 <div class=mode-selector>
 <label for=mode-chk>
@@ -108,27 +119,32 @@
 <span>削除</span>
 </label>
 </div>
-<button id=uncheck-all-button>赤枠全解除</button>
-<button id=reset-button data-role=reset>選択済スキル全削除</button>
+<button id=uncheck-all-button type=button>赤枠全解除</button>
+<button id=reset-button type=button data-role=reset>
+選択済スキル全削除
+</button>
 </div>
+</section>
+<section>
+<h2 class=visually-hidden>非表示スキル</h2>
 <details class=accordion-001>
 <summary>非表示スキル</summary>
 <div id=hidden-lists>
 <div class=edit-mode>
-<label><input type=radio id=mode-edit name=app-mode>
-<span>編集モードON</span></label>
-<label><input type=radio id=mode-normal name=app-mode checked>
-<span>OFF</span></label>
+<label><input type=radio id=mode-edit name=app-mode><span>編集モードON</span></label>
+<label><input type=radio id=mode-normal name=app-mode checked><span>OFF</span></label>
 </div>
-<button id=clear-hidden-button class=action-button>
-非表示の全解除
+<button id=save-hidden-button class=action-button type=button>
+localStorageに保存
 </button>
-<button id=save-hidden-button class=action-button>
-LocalStroageに保存
+<button id=clear-hidden-button class=action-button type=button>
+非表示の全解除
 </button>
 </div>
 <div id=hidden-items-container></div>
 </details>
+</section>
+</main>
 <script src=main.js defer></script>
 </body>
 </html>
